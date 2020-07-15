@@ -54,7 +54,7 @@ body {
     height: 95vh;
     position: relative;
     animation: moveInTop 1s ease-in;
-    background-image: url(https://trello-attachments.s3.amazonaws.com/5ea6ab9a3092546a1ceab7ba/5ea6abbe1ad7150a79de552a/f74c74a39ecf6e51b369181a04fb0c25/header-bg.png);
+    background-image: url(https://www.dropbox.com/s/bf6hu5mm1iltkmx/header-bg.png?dl=1);
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
