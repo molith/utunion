@@ -1,0 +1,247 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar { display: none; }
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(2rem, 1fr);
+    grid-template-rows: 7rem auto min-content;
+}
+
+.container .main-logo {
+    grid-column: 2 / -2;
+    grid-row: 1 / 2;
+    display: grid;
+    position: relative;
+    z-index: 2;
+    animation: moveInBot 1s ease-in;
+    align-items: center;
+}
+
+.container .main-logo .logo-name {
+    width: 20rem;
+}
+
+.container .header-logo {
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+    height: 95vh;
+    position: relative;
+    animation: moveInTop 1s ease-in;
+    background-image: url(https://trello-attachments.s3.amazonaws.com/5ea6ab9a3092546a1ceab7ba/5ea6abbe1ad7150a79de552a/f74c74a39ecf6e51b369181a04fb0c25/header-bg.png);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+}
+
+.container .header-text {
+    grid-column: 2 / -2;
+    grid-row: 2 / 3;
+    margin-top: -5rem;
+    position: relative;
+    color: #fff;
+    font-weight: 900;
+    display: flex;
+    font-size: 10rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .header-text h1 {
+    line-height: 7rem;
+    width: 80vw;
+}
+
+.container .header-text p {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.btn:link,
+.btn:visited {}
+
+.container .header-text .product-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header-text .product-btn a {
+    color: black;
+    font-size: 2.5rem;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    border-radius: 3rem;
+    padding: 0 2rem;
+    margin-top: 5rem;
+    align-self: center;
+}
+
+.container .header-text .product-btn a:hover {
+    transform: translateY(-.5rem);
+    transition: all ease 0.2s;
+    color: #777;
+}
+
+#product {
+    grid-column: 2 / -2;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+#product h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 3rem;
+}
+#product h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+#product {
+    margin: auto 2rem;
+}
+
+#product .product-list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(30rem, 1fr));
+    overflow-x: scroll;
+    list-style: none;
+    justify-items: center;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.product-list li {
+    border: .5rem solid;
+    border-radius: 1rem;
+}
+
+.product-list:first-child img {
+    margin-left: 2rem;
+}
+
+.product-list img {
+    width: 30rem;
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-container img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.swiper-container .swiper-button-prev {
+    color: #000;
+}
+
+.swiper-container .swiper-button-next {
+    color: #000;
+}
+
+.swiper-container 
+.swiper-pagination.swiper-pagination-bullets
+.swiper-pagination-bullet-active {
+    background: #000;
+}
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBot {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
